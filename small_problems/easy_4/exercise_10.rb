@@ -37,7 +37,9 @@ else
 # DATA STRUCT
 # ALGORITHM
 # CODE
+=end 
 
+# My Solution
 DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 def integer_to_string(num)
@@ -60,6 +62,8 @@ puts signed_integer_to_string(4321) == '+4321'
 puts signed_integer_to_string(-123) == '-123'
 puts signed_integer_to_string(0) == '0'
 
+# LS Solution
+=begin
 DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 def integer_to_string(num)
@@ -81,3 +85,26 @@ puts signed_integer_to_string(0) == '0'
 =end
 
 # Further Exploration
+# Refactor solution to reduce the number of method calls
+=begin
+DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+def integer_to_string(num)
+  array_of_str = num.digits.reverse.map { |element| DIGITS[element] }
+  array_of_str.join
+end 
+
+def signed_integer_to_string(number)
+  sign = case number <=> 0
+  when -1 then "-"
+  when +1 then "+"
+  else         ""
+  end
+
+  "#{sign}#{integer_to_string(number.abs)}"
+end
+
+puts signed_integer_to_string(4321) == '+4321'
+puts signed_integer_to_string(-123) == '-123'
+puts signed_integer_to_string(0) == '0'
+=end
