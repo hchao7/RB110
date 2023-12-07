@@ -53,7 +53,7 @@ puts ascii_value('a') == 97
 puts ascii_value('') == 0
 =end
 
-# Further Solution
+# Further Exploration
 char.ord.mystery == char
 # The mystery method is #chr — if you call it on
 # a string with multiple characters, #ord will give you

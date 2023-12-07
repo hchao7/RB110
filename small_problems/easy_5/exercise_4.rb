@@ -43,6 +43,7 @@ contains nothing but words and spaces.
 # CODE
 =end
 
+
 def swap(string)
   words_array = string.split(' ')
   words_array.map! do |element|
@@ -59,3 +60,5 @@ end
 puts swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'
 puts swap('Abcde') == 'ebcdA'
 puts swap('a') == 'a'
+
+
