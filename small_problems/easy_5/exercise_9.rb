@@ -37,6 +37,7 @@ d << a << ' ' << l ... (new string)
 
 =end
 
+=begin
 def crunch(string)
   reduced_string = ''
   string.each_char do |char|
@@ -47,6 +48,17 @@ def crunch(string)
     end
   end
   reduced_string
+end
+=end
+
+def crunch(text)
+  index = 0
+  crunch_text = ''
+  text.each_char do |char|
+		crunch_text << char unless char == text[index + 1]
+    index += 1
+  end
+  crunch_text
 end
 
 puts crunch('ddaaiillyy ddoouubbllee') == 'daily double'

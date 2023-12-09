@@ -11,7 +11,7 @@ fifteen, sixteen, seventeen, eighteen, nineteen
 # PROBLEM
 - Input: An array of integers
 - Output: An array of integers sorted, 
-          based on Eng words
+          based on how the Eng words are sorted
 - Requirements:
     Explicit:
       numbers 0 -> 19
